@@ -225,12 +225,13 @@ function startTypewriter() {
     
     const fullMessage = `Hi,
 
-Happy Birthday!
+Jasmine!
 
-Hari ini aku pengen kamu ngerasain semua hal positif dan keajaiban yang cuma bisa didapetin kalo kamu ada di dunia ini. Semoga segala keinginanmu tercapai, apalagi yang kocak-kocak dan gak biasa, karena kamu tuh unik banget! Aku selalu percaya kalau kamu bisa melewati semua tantangan dengan kekuatan dan semangat yang luar biasa.
+There were so many things I wanted to tell her, but I didn’t. Not because I didn’t care, but because I thought silence would protect what was left of us. I wanted to say thank you — for making me believe in connection again. I wanted to say sorry — for not knowing how to love her better through the distance. But most of all, I wanted to say I still think of her — not with pain, but with peace.
 
-Terima kasih udah jadi bagian hidup aku yang paling berharga. Kamu bener-bener bikin hari-hari aku jadi lebih berarti dan penuh warna. Semoga di tahun yang baru ini, kamu makin bahagia, makin sukses, dan tentunya makin cantik (walaupun udah cantik banget sih!).
+I wanted to say thank you — for making me believe in connection again. I wanted to say sorry — for not knowing how to love her better through the distance. But most of all, I wanted to say I still think of her — not with pain, but with peace.I never meant to write about her. But somehow, every time I sit down to clear my thoughts, she’s there — quietly existing between my sentences. It’s not obsession, not anymore. It’s memory finding a way to breathe.
 
+They say time heals. Maybe it does. But writing reminds me that some people aren’t meant to be erased — only transformed into softer things: paragraphs, metaphors, or silence that doesn’t hurt as much.
 I love you so much! 💕`;
     
     // Clear content and start fresh
@@ -519,7 +520,7 @@ function startNewSession() {
     
     // Reset for new session
     progressDiv.textContent = 'READY TO PRINT';
-    photoBtn.textContent = 'MULAI CETAK';
+    photoBtn.textContent = 'START';
     
     // Remove old listener and add original
     photoBtn.removeEventListener('click', startNewSession);
@@ -610,19 +611,19 @@ function loadSpotifyPlaylist(playlistNumber) {
     const playlists = {
         1: {
             // Ganti dengan playlist pertama kamu
-            embedUrl: 'https://open.spotify.com/embed/playlist/37i9dQZF1DWYtQSOiZF6hj?si=0b945793c2934ba1',
-            name: 'Birthday Special Mix',
-            description: 'Lagu-lagu spesial untuk hari istimewa kamu ✨'
+            embedUrl: 'https://open.spotify.com/playlist/7KGLOl9cUGlaDKArLAe65Z?si=ifWGvlFFTVqI8wzRloCrPg',
+            name: 'For Jasmine',
+            description: 'I stil care for you ✨'
         },
         2: {
             // Ganti dengan playlist kedua kamu
-            embedUrl: 'https://open.spotify.com/embed/playlist/3gPSenyxZMdB3A54HeEruz?si=6b4dec830d4f4a48',
-            name: 'Love Songs Collection',
-            description: 'Koleksi lagu cinta terbaik untuk kita ❤️'
+            embedUrl: 'https://open.spotify.com/playlist/25aIe5UrgY2QOfmR2VIyK6?si=_LOBC4usRaOIVPEyox9mTA',
+            name: 'Songs that remind me of you',
+            description: 'yearner final boss hahaha'
         },
         3: {
             // Ganti dengan playlist ketiga kamu
-            embedUrl: 'https://open.spotify.com/embed/playlist/4dlQ4JHE6abxv38aae2HL1?si=95730613199e4dad',
+            embedUrl: 'https://open.spotify.com/playlist/7nDxCQuQyBUxvc4LFGC3EU?si=a8n8riOLQfyxZGfHzrABiw',
             name: 'Happy Memories',
             description: 'Lagu-lagu yang mengingatkan kenangan indah 🌟'
         }
