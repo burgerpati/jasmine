@@ -611,19 +611,19 @@ function loadSpotifyPlaylist(playlistNumber) {
     const playlists = {
         1: {
             // Ganti dengan playlist pertama kamu
-            embedUrl: 'https://open.spotify.com/playlist/7KGLOl9cUGlaDKArLAe65Z?si=ifWGvlFFTVqI8wzRloCrPg',
+            embedUrl: 'https://open.spotify.com/embed/playlist/7KGLOl9cUGlaDKArLAe65Z?si=ifWGvlFFTVqI8wzRloCrPg',
             name: 'For Jasmine',
             description: 'I stil care for you'
         },
         2: {
             // Ganti dengan playlist kedua kamu
-            embedUrl: 'https://open.spotify.com/playlist/25aIe5UrgY2QOfmR2VIyK6?si=_LOBC4usRaOIVPEyox9mTA',
+            embedUrl: 'https://open.spotify.com/embed/playlist/25aIe5UrgY2QOfmR2VIyK6?si=_LOBC4usRaOIVPEyox9mTA',
             name: 'Songs that remind me of you',
             description: 'yearner final boss hahaha'
         },
         3: {
             // Ganti dengan playlist ketiga kamu
-            embedUrl: 'https://open.spotify.com/playlist/7nDxCQuQyBUxvc4LFGC3EU?si=a8n8riOLQfyxZGfHzrABiw',
+            embedUrl: 'https://open.spotify.com/embed/playlist/7nDxCQuQyBUxvc4LFGC3EU?si=a8n8riOLQfyxZGfHzrABiw',
             name: 'Happy Memories',
             description: 'Lagu-lagu yang mengingatkan kenangan indah 🌟'
         }
