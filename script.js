@@ -292,10 +292,10 @@ function initializeGallery() {
         </div>
         <div class="photobox-progress">READY TO PRINT</div>
         <div class="photo-display">
-            <div class="photo-placeholder">Press MULAI CETAK to start photo session</div>
+            <div class="photo-placeholder">Press START to start photo session</div>
         </div>
         <div class="photobox-controls">
-            <button class="photo-btn">MULAI CETAK</button>
+            <button class="photo-btn">START</button>
         </div>
     `;
     
@@ -323,19 +323,19 @@ function startPhotoShow() {
     // Foto lokal dari folder images
     const photos = [
         {
-            text: 'Our First Date 💕',
+            text: 'Our First Date',
             image: './images/photo1.jpg'
         },
         {
-            text: 'Birthday Moment 🎂',
+            text: 'Birthday Moment',
             image: './images/photo2.jpg'
         },
         {
-            text: 'Adventure Time 🌟',
+            text: 'Adventure Time',
             image: './images/photo3.jpg'
         },
         {
-            text: 'Cozy Together ❤️',
+            text: 'Cozy Together',
             image: './images/photo4.jpg'
         },
         {
@@ -358,7 +358,7 @@ function startPhotoShow() {
     
     console.log('Total photos:', photos.length);
     
-    photoBtn.textContent = 'MENCETAK...';
+    photoBtn.textContent = 'PRINTING...';
     photoBtn.disabled = true;
     progressDiv.textContent = 'INITIALIZING CAMERA...';
     
@@ -502,7 +502,7 @@ function startPhotoCapture(photos) {
             
             setTimeout(() => {
                 progressDiv.textContent = '🎉 PHOTO STRIP COMPLETE! 🎉';
-                photoBtn.textContent = 'CETAK LAGI';
+                photoBtn.textContent = 'YAY';
                 photoBtn.disabled = false;
                 
                 photoBtn.removeEventListener('click', startPhotoShow);
@@ -529,7 +529,7 @@ function startNewSession() {
     // Clear display
     const photoDisplay = document.querySelector('.photo-display');
     if (photoDisplay) {
-        photoDisplay.innerHTML = '<div class="photo-placeholder">Press MULAI CETAK to start photo session</div>';
+        photoDisplay.innerHTML = '<div class="photo-placeholder">Press START to start photo session</div>';
     }
     
     // CRITICAL: Reset photo index to exactly 0
@@ -613,7 +613,7 @@ function loadSpotifyPlaylist(playlistNumber) {
             // Ganti dengan playlist pertama kamu
             embedUrl: 'https://open.spotify.com/playlist/7KGLOl9cUGlaDKArLAe65Z?si=ifWGvlFFTVqI8wzRloCrPg',
             name: 'For Jasmine',
-            description: 'I stil care for you ✨'
+            description: 'I stil care for you'
         },
         2: {
             // Ganti dengan playlist kedua kamu
