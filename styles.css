@@ -1303,3 +1303,15 @@ body {
 .birthday-title {
     animation: glow 2s ease-in-out infinite;
 }
+/* 🌸 Floating hearts & stars animation */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.heart, .star {
+  position: absolute;
+  animation: float 10s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
