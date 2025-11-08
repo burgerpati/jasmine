@@ -175,25 +175,36 @@
     </div>
 
     <script src="script.js"></script>
- <script>
-setInterval(() => {
+<script>
+function spawnPixelFloat() {
   const el = document.createElement("img");
   el.src = "https://i.pinimg.com/736x/f4/10/65/f41065f8dab1db1d8855418100b05488.jpg"; 
   el.className = "pixel-float";
-  
-  // Random position and animation
-  el.style.left = Math.random() * 100 + "vw";
-  el.style.width = Math.random() * 30 + 50 + "px";
-  el.style.animationDuration = Math.random() * 5 + 10 + "s";
-  el.style.animationDelay = Math.random() * 3 + "s";
+
+  // Randomize position and animation
+  const randomLeft = Math.random() * 100; // 0–100vw
+  const randomSize = Math.random() * 30 + 40; // 40–70px
+  const randomDuration = Math.random() * 6 + 8; // 8–14s
+  const randomDelay = Math.random() * 3; // 0–3s
+  const randomBottom = Math.random() * 10; // random starting offset
+
+  el.style.left = randomLeft + "vw";
+  el.style.bottom = randomBottom + "vh";
+  el.style.width = randomSize + "px";
+  el.style.animationDuration = randomDuration + "s";
+  el.style.animationDelay = randomDelay + "s";
   el.style.opacity = Math.random() * 0.8 + 0.2;
-  
+
   document.body.appendChild(el);
-  
-  // Auto-remove after floating
-  setTimeout(() => el.remove(), 15000);
-}, 1200);
+
+  // Clean up after animation ends
+  setTimeout(() => el.remove(), (randomDuration + randomDelay) * 1000);
+}
+
+// Spawn new floating items every 1.5s
+setInterval(spawnPixelFloat, 1500);
 </script>
+
 
 
 
