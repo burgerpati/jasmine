@@ -175,21 +175,18 @@
     </div>
 
     <script src="script.js"></script>
-   <script>
+  <script>
 setInterval(() => {
-  const el = document.createElement('img');
-  const isHeart = Math.random() > 0.5;
-  el.src = isHeart
-    ? "https://i.imgur.com/s9b2D9r.png"  // pixel heart
-    : "https://i.imgur.com/hCfsu2v.png"; // pixel star
-  el.className = isHeart ? "heart" : "star";
+  const el = document.createElement("img");
+  el.src = "https://i.pinimg.com/1200x/85/42/6f/85426f8a1b37d3ae3aa9020070e542eb.jpg"; // replace with your real link
+  el.className = "floaty";
   el.style.left = Math.random() * 100 + "vw";
-  el.style.top = "100vh";
-  el.style.width = Math.random() * 25 + 10 + "px";
+  el.style.width = Math.random() * 40 + 40 + "px";
   document.body.appendChild(el);
-  setTimeout(() => el.remove(), 10000);
-}, 800);
+  setTimeout(() => el.remove(), 12000);
+}, 1500);
 </script>
+
 
 
 </body>
