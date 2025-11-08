@@ -1316,11 +1316,10 @@ body {
 
 .pixel-float {
   position: fixed;
-  bottom: -60px;
   pointer-events: none;
   animation: floatUp linear infinite;
   image-rendering: pixelated;
-  z-index: 0;
+  z-index: 1;
   will-change: transform, opacity;
 }
 
