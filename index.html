@@ -175,19 +175,22 @@
     </div>
 
     <script src="script.js"></script>
-    <!-- Floating hearts and stars -->
-<script>
-  setInterval(() => {
-    const el = document.createElement('div');
-    el.className = Math.random() > 0.5 ? 'heart' : 'star';
-    el.textContent = el.className === 'heart' ? '💖' : '🌟';
-    el.style.left = Math.random() * 100 + 'vw';
-    el.style.top = '100vh';
-    el.style.fontSize = Math.random() * 24 + 12 + 'px';
-    document.body.appendChild(el);
-    setTimeout(() => el.remove(), 10000);
-  }, 700);
+   <script>
+setInterval(() => {
+  const el = document.createElement('img');
+  const isHeart = Math.random() > 0.5;
+  el.src = isHeart
+    ? "https://i.imgur.com/s9b2D9r.png"  // pixel heart
+    : "https://i.imgur.com/hCfsu2v.png"; // pixel star
+  el.className = isHeart ? "heart" : "star";
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.top = "100vh";
+  el.style.width = Math.random() * 25 + 10 + "px";
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 10000);
+}, 800);
 </script>
+
 
 </body>
 </html>
