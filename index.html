@@ -175,16 +175,24 @@
     </div>
 
     <script src="script.js"></script>
-  <script>
+ <script>
 setInterval(() => {
   const el = document.createElement("img");
-  el.src = "https://i.pinimg.com/1200x/85/42/6f/85426f8a1b37d3ae3aa9020070e542eb.jpg"; // replace with your real link
-  el.className = "floaty";
+  el.src = "https://i.pinimg.com/736x/f4/10/65/f41065f8dab1db1d8855418100b05488.jpg"; 
+  el.className = "pixel-float";
+  
+  // Random position and animation
   el.style.left = Math.random() * 100 + "vw";
-  el.style.width = Math.random() * 40 + 40 + "px";
+  el.style.width = Math.random() * 30 + 50 + "px";
+  el.style.animationDuration = Math.random() * 5 + 10 + "s";
+  el.style.animationDelay = Math.random() * 3 + "s";
+  el.style.opacity = Math.random() * 0.8 + 0.2;
+  
   document.body.appendChild(el);
-  setTimeout(() => el.remove(), 12000);
-}, 1500);
+  
+  // Auto-remove after floating
+  setTimeout(() => el.remove(), 15000);
+}, 1200);
 </script>
 
 
