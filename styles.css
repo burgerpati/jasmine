@@ -1303,18 +1303,26 @@ body {
 .birthday-title {
     animation: glow 2s ease-in-out infinite;
 }
-/* 🌸 Floating pixel hearts & stars */
-@keyframes float {
-  0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(-100vh) scale(0.8) rotate(360deg); opacity: 0; }
+/* 🌸 Floating pixel character animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
-.heart, .star {
+.floaty {
   position: absolute;
-  animation: float 10s linear infinite;
-  z-index: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatUp 12s linear infinite;
+  image-rendering: pixelated;
+  width: 64px; /* adjust for size */
   pointer-events: none;
-  filter: drop-shadow(0 0 3px rgba(255,255,255,0.6));
-  image-rendering: pixelated; /* 🩵 Makes it crisp & pixel-style */
+  z-index: 0;
 }
-
