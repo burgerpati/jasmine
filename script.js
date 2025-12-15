@@ -24,55 +24,26 @@ function initializeApp() {
 }
 
 function simulateLoading() {
+    let progress = 0;
     const progressFill = document.getElementById('progress-fill');
     const progressText = document.querySelector('.progress-text');
-    const loadingText = document.querySelector('.loading-text');
-    const loadingScreen = document.getElementById('loading-screen');
-    
-    let progress = 0;
-    const loadingMessages = [
-        '&gt; INITIALIZING..._',
-        '&gt; LOADING MEMORIES..._',
-        '&gt; PREPARING SURPRISE..._',
-        '&gt; ALMOST READY..._',
-        '&gt; LOADING COMPLETE!_'
-    ];
-    
-    let messageIndex = 0;
-    
+
+    if (!progressFill || !progressText) {
+        console.log('Loading elements not found');
+        transitionToMainScreen();
+        return;
+    }
+
     const interval = setInterval(() => {
-        progress += Math.random() * 15 + 5; // Random increment between 5-20
-        
-        if (progress > 100) progress = 100;
-        
-        // Update progress bar with smooth animation
+        progress += 10;
         progressFill.style.width = progress + '%';
-        progressText.textContent = Math.floor(progress) + '%';
-        
-        // Update loading message based on progress
-        const newMessageIndex = Math.floor((progress / 100) * (loadingMessages.length - 1));
-        if (newMessageIndex !== messageIndex && newMessageIndex < loadingMessages.length) {
-            messageIndex = newMessageIndex;
-            
-            // Fade out current message
-            loadingText.style.opacity = '0';
-            
-            setTimeout(() => {
-                loadingText.innerHTML = loadingMessages[messageIndex];
-                loadingText.style.opacity = '1';
-            }, 200);
-        }
-        
+        progressText.textContent = progress + '%';
+
         if (progress >= 100) {
             clearInterval(interval);
-            
-            // Add completion animation
-            loadingScreen.classList.add('loading-complete');
-            
-            // Wait for completion animation, then transition
             setTimeout(() => {
                 transitionToMainScreen();
-            }, 1000);
+            }, 500);
         }
     }, 200);
 }
