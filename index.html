@@ -175,38 +175,6 @@
     </div>
 
     <script src="script.js"></script>
-<script>
-function spawnPixelFloat() {
-  const el = document.createElement("img");
-  el.src = "https://png.pngtree.com/png-clipart/20220124/ourmid/pngtree-cute-pixel-feng-shui-fruit-cherry-png-image_4270991.png"; 
-  el.className = "pixel-float";
-
-  // Randomize position and animation
-  const randomLeft = Math.random() * 100; // 0–100vw
-  const randomSize = Math.random() * 30 + 40; // 40–70px
-  const randomDuration = Math.random() * 6 + 8; // 8–14s
-  const randomDelay = Math.random() * 3; // 0–3s
-  const randomBottom = Math.random() * 10; // random starting offset
-
-  el.style.left = randomLeft + "vw";
-  el.style.bottom = randomBottom + "vh";
-  el.style.width = randomSize + "px";
-  el.style.animationDuration = randomDuration + "s";
-  el.style.animationDelay = randomDelay + "s";
-  el.style.opacity = Math.random() * 0.8 + 0.2;
-
-  document.body.appendChild(el);
-
-  // Clean up after animation ends
-  setTimeout(() => el.remove(), (randomDuration + randomDelay) * 1000);
-}
-
-// Spawn new floating items every 1.5s
-setInterval(spawnPixelFloat, 1500);
-</script>
-
-
-
 
 </body>
 </html>
