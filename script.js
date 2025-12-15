@@ -277,7 +277,6 @@ I wanted to say thank you — for making me believe in connection again. I wante
 They say time heals. Maybe it does. But writing reminds me that some people aren’t meant to be erased — only transformed into softer things: paragraphs, metaphors, or silence that doesn’t hurt as much.
 I love you so much! 💕`;
 
-`;
             messageContent.innerHTML = fullMessage;
             isTyping = false;
             messageContent.scrollTop = messageContent.scrollHeight;
