@@ -233,6 +233,7 @@ I wanted to say thank you — for making me believe in connection again. I wante
 
 They say time heals. Maybe it does. But writing reminds me that some people aren’t meant to be erased — only transformed into softer things: paragraphs, metaphors, or silence that doesn’t hurt as much.
 I love you so much! 💕`;
+
     
     // Clear content and start fresh
     messageContent.innerHTML = '';
@@ -267,7 +268,16 @@ function skipTypewriter() {
         clearInterval(typewriterInterval);
         const messageContent = document.querySelector('.message-content');
         if (messageContent) {
-            const fullMessage = `Hi Cel,<br><br>Happy Birthday!<br><br>Hari ini aku pengen kamu ngerasain semua hal positif dan keajaiban yang cuma bisa didapetin kalo kamu ada di dunia ini. Semoga segala keinginanmu tercapai, apalagi yang kocak-kocak dan gak biasa, karena kamu tuh unik banget! Aku selalu percaya kalau kamu bisa melewati semua tantangan dengan kekuatan dan semangat yang luar biasa.<br><br>Terima kasih udah jadi bagian hidup aku yang paling berharga. Kamu bener-bener bikin hari-hari aku jadi lebih berarti dan penuh warna. Semoga di tahun yang baru ini, kamu makin bahagia, makin sukses, dan tentunya makin cantik (walaupun udah cantik banget sih!).<br><br>I love you so much! 💕`;
+            const fullMessage = `Hi Cel,<br><br>Happy Birthday!<br><br>Jasmine!
+
+There were so many things I wanted to tell her, but I didn’t. Not because I didn’t care, but because I thought silence would protect what was left of us. I wanted to say thank you — for making me believe in connection again. I wanted to say sorry — for not knowing how to love her better through the distance. But most of all, I wanted to say I still think of her — not with pain, but with peace.
+
+I wanted to say thank you — for making me believe in connection again. I wanted to say sorry — for not knowing how to love her better through the distance. But most of all, I wanted to say I still think of her — not with pain, but with peace.I never meant to write about her. But somehow, every time I sit down to clear my thoughts, she’s there — quietly existing between my sentences. It’s not obsession, not anymore. It’s memory finding a way to breathe.
+
+They say time heals. Maybe it does. But writing reminds me that some people aren’t meant to be erased — only transformed into softer things: paragraphs, metaphors, or silence that doesn’t hurt as much.
+I love you so much! 💕`;
+
+`;
             messageContent.innerHTML = fullMessage;
             isTyping = false;
             messageContent.scrollTop = messageContent.scrollHeight;
@@ -292,10 +302,10 @@ function initializeGallery() {
         </div>
         <div class="photobox-progress">READY TO PRINT</div>
         <div class="photo-display">
-            <div class="photo-placeholder">Press START to start photo session</div>
+            <div class="photo-placeholder">Press MULAI CETAK to start photo session</div>
         </div>
         <div class="photobox-controls">
-            <button class="photo-btn">START</button>
+            <button class="photo-btn">MULAI CETAK</button>
         </div>
     `;
     
@@ -323,19 +333,19 @@ function startPhotoShow() {
     // Foto lokal dari folder images
     const photos = [
         {
-            text: 'Our First Date',
+            text: 'Our First Date 💕',
             image: './images/photo1.jpg'
         },
         {
-            text: 'Birthday Moment',
+            text: 'Birthday Moment 🎂',
             image: './images/photo2.jpg'
         },
         {
-            text: 'Adventure Time',
+            text: 'Adventure Time 🌟',
             image: './images/photo3.jpg'
         },
         {
-            text: 'Cozy Together',
+            text: 'Cozy Together ❤️',
             image: './images/photo4.jpg'
         },
         {
@@ -358,7 +368,7 @@ function startPhotoShow() {
     
     console.log('Total photos:', photos.length);
     
-    photoBtn.textContent = 'PRINTING...';
+    photoBtn.textContent = 'MENCETAK...';
     photoBtn.disabled = true;
     progressDiv.textContent = 'INITIALIZING CAMERA...';
     
@@ -502,7 +512,7 @@ function startPhotoCapture(photos) {
             
             setTimeout(() => {
                 progressDiv.textContent = '🎉 PHOTO STRIP COMPLETE! 🎉';
-                photoBtn.textContent = 'YAY';
+                photoBtn.textContent = 'CETAK LAGI';
                 photoBtn.disabled = false;
                 
                 photoBtn.removeEventListener('click', startPhotoShow);
@@ -520,7 +530,7 @@ function startNewSession() {
     
     // Reset for new session
     progressDiv.textContent = 'READY TO PRINT';
-    photoBtn.textContent = 'START';
+    photoBtn.textContent = 'MULAI CETAK';
     
     // Remove old listener and add original
     photoBtn.removeEventListener('click', startNewSession);
@@ -529,7 +539,7 @@ function startNewSession() {
     // Clear display
     const photoDisplay = document.querySelector('.photo-display');
     if (photoDisplay) {
-        photoDisplay.innerHTML = '<div class="photo-placeholder">Press START to start photo session</div>';
+        photoDisplay.innerHTML = '<div class="photo-placeholder">Press MULAI CETAK to start photo session</div>';
     }
     
     // CRITICAL: Reset photo index to exactly 0
