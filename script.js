@@ -268,7 +268,7 @@ function skipTypewriter() {
         clearInterval(typewriterInterval);
         const messageContent = document.querySelector('.message-content');
         if (messageContent) {
-            const fullMessage = `Hi Cel,<br><br>Happy Birthday!<br><br>Jasmine!
+            const fullMessage = `Hi Jas,<br><br>Happy Birthday!<br><br>Jasmine!
 
 There were so many things I wanted to tell her, but I didn’t. Not because I didn’t care, but because I thought silence would protect what was left of us. I wanted to say thank you — for making me believe in connection again. I wanted to say sorry — for not knowing how to love her better through the distance. But most of all, I wanted to say I still think of her — not with pain, but with peace.
 
@@ -301,10 +301,10 @@ function initializeGallery() {
         </div>
         <div class="photobox-progress">READY TO PRINT</div>
         <div class="photo-display">
-            <div class="photo-placeholder">Press MULAI CETAK to start photo session</div>
+            <div class="photo-placeholder">Press START PRINTING to start photo session</div>
         </div>
         <div class="photobox-controls">
-            <button class="photo-btn">MULAI CETAK</button>
+            <button class="photo-btn">START PRINTING</button>
         </div>
     `;
     
@@ -336,7 +336,7 @@ function startPhotoShow() {
             image: './images/photo1.jpg'
         },
         {
-            text: 'Birthday Moment 🎂',
+            text: 'Chippoy my love 🎂',
             image: './images/photo2.jpg'
         },
         {
@@ -348,26 +348,26 @@ function startPhotoShow() {
             image: './images/photo4.jpg'
         },
         {
-            text: 'Sweet Memories 🥰',
+            text: 'Chippoy',
             image: './images/photo5.jpg'
         },
         {
-            text: 'Laugh Together 😂',
+            text: 'Chippoy',
             image: './images/photo6.jpg'
         },
         {
-            text: 'Perfect Day ☀️',
+            text: 'Chippoy',
             image: './images/photo7.jpg'
         },
         {
-            text: 'Love Forever 💖',
+            text: 'Chippy',
             image: './images/photo8.jpg'
         }
     ];
     
     console.log('Total photos:', photos.length);
     
-    photoBtn.textContent = 'MENCETAK...';
+    photoBtn.textContent = 'PRINTTING...';
     photoBtn.disabled = true;
     progressDiv.textContent = 'INITIALIZING CAMERA...';
     
@@ -388,7 +388,7 @@ function startPhotoShow() {
             <div class="photo-frames-container">
                 ${framesHTML}
             </div>
-            <div class="photo-strip-footer">💕 BIRTHDAY MEMORIES 💕</div>
+            <div class="photo-strip-footer">💕 CHIPPOY'S GALLERY 💕</div>
         </div>
         <div class="scroll-indicator">⬇ Scroll Down ⬇</div>
     `;
@@ -511,7 +511,7 @@ function startPhotoCapture(photos) {
             
             setTimeout(() => {
                 progressDiv.textContent = '🎉 PHOTO STRIP COMPLETE! 🎉';
-                photoBtn.textContent = 'CETAK LAGI';
+                photoBtn.textContent = 'PRINT AGAIN';
                 photoBtn.disabled = false;
                 
                 photoBtn.removeEventListener('click', startPhotoShow);
@@ -529,7 +529,7 @@ function startNewSession() {
     
     // Reset for new session
     progressDiv.textContent = 'READY TO PRINT';
-    photoBtn.textContent = 'MULAI CETAK';
+    photoBtn.textContent = 'START PRINTING';
     
     // Remove old listener and add original
     photoBtn.removeEventListener('click', startNewSession);
