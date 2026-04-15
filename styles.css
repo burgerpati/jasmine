@@ -211,7 +211,7 @@ body {
 .gameboy-body {
     width: 400px;
     height: 600px;
-    background: linear-gradient(145deg, #c2f5c3, #cdeabc);
+    background: linear-gradient(145deg, oklch(76.504% 0.05968 251.008), #a4b0dc);
     border-radius: 20px 20px 40px 40px;
     padding: 20px;
     box-shadow: 
